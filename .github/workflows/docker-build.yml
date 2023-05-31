@@ -4,8 +4,8 @@ on:
   workflow_dispatch
   
 env:
-  REGISTRY: ghcr.io
-  IMAGE_NAME: docker_app_img
+  REGISTRY: ghcr.io/${{ github.repository }}
+  IMAGE_NAME: ${{ github.repository }}/docker_app_img
   IMAGE_TAG: 1.0.${{ github.run_number }}
   
 jobs:
